@@ -40,7 +40,22 @@ async function main() {
 		// Submit the specified transaction.
 		// createCar transaction - requires 5 argument, ex: ('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom')
 		// changeCarOwner transaction - requires 2 args , ex: ('changeCarOwner', 'CAR10', 'Dave')
-		await contract.submitTransaction('invoke', 'b', 'a', '10');
+
+		//await contract.submitTransaction('invoke', 'b', 'a', '10');
+		//<MobileID>,<MobileNumber>,<AAL>,<MobileIDIAL>,<IssuerCode>,<IssuerName>,<VerifierCode>,<VerifierName>,<ConsentDate>,<TxCode>
+		await contract.submitTransaction(
+			'addConsent',
+			'0000',
+			'0890671344',
+			'2.1',
+			'2.3',
+			'issuer001',
+			'AIS',
+			'verifier001',
+			'Bangkok Bank',
+			'05/04/2562',
+			'tx0001'
+		);
 		console.log('Transaction has been submitted');
 
 		// Disconnect from the gateway.

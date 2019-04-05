@@ -40,10 +40,16 @@ async function main() {
 		// Evaluate the specified transaction.
 		// queryCar transaction - requires 1 argument, ex: ('queryCar', 'CAR4')
 		// queryAllCars transaction - requires no arguments, ex: ('queryAllCars')
-		const resultA = await contract.evaluateTransaction('query', 'a');
-		console.log(`Transaction has been evaluated, result is: 'a' = ${resultA.toString()}`);
-		const resultB = await contract.evaluateTransaction('query', 'b');
-		console.log(`Transaction has been evaluated, result is: 'b' = ${resultB.toString()}`);
+		// const resultA = await contract.evaluateTransaction('query', 'a');
+		// console.log(`Transaction has been evaluated, result is: 'a' = ${resultA.toString()}`);
+		// const resultB = await contract.evaluateTransaction('query', 'b');
+		// console.log(`Transaction has been evaluated, result is: 'b' = ${resultB.toString()}`);
+
+		const result = await contract.evaluateTransaction('queryConsent', 'CONSENT_0000');
+		console.log(`Transaction has been evaluated, result is: 'CONSENT_0000' = ${result.toString()}`);
+
+		const resultList = await contract.evaluateTransaction('queryAllConsents');
+		console.log(`Transaction has been evaluated, result is: 'All Consents' = ${resultList.toString()}`);
 	} catch (error) {
 		console.error(`Failed to evaluate transaction: ${error}`);
 		process.exit(1);
