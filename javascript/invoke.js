@@ -35,7 +35,7 @@ async function main() {
 		const network = await gateway.getNetwork('mychannel');
 
 		// Get the contract from the network.
-		const contract = network.getContract('mycc');
+		const contract = network.getContract('poc_cc');
 
 		// Submit the specified transaction.
 		// createCar transaction - requires 5 argument, ex: ('createCar', 'CAR12', 'Honda', 'Accord', 'Black', 'Tom')

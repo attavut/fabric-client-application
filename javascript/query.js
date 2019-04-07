@@ -35,7 +35,7 @@ async function main() {
 		const network = await gateway.getNetwork('mychannel');
 
 		// Get the contract from the network.
-		const contract = network.getContract('mycc');
+		const contract = network.getContract('poc_cc');
 
 		// Evaluate the specified transaction.
 		// queryCar transaction - requires 1 argument, ex: ('queryCar', 'CAR4')
