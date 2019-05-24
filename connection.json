@@ -36,20 +36,20 @@
     },
     "orderers": {
         "orderer.example.com": {
-            "url": "grpc://35.240.197.248:7050"
+            "url": "grpc://xx.xx.xx.xx:7050"
         }
     },
     "peers": {
         "peer0.org1.example.com": {
-            "url": "grpc://35.240.197.248:7051"
+            "url": "grpc://xx.xx.xx.xx:7051"
         },
         "peer0.org2.example.com": {
-            "url": "grpc://35.240.221.157:9051"
+            "url": "grpc://xx.xx.xx.xx:9051"
         }
     },
     "certificateAuthorities": {
         "ca0.example.com": {
-            "url": "http://35.240.197.248:7054",
+            "url": "http://xx.xx.xx.xx:7054",
             "caName": "ca0.example.com"
         }
     }
